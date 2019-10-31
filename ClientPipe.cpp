@@ -27,7 +27,7 @@ int main()
 
     // CreateFile for Pipe
     hCreateFile = CreateFile(
-        "\\\\.\\pipe\\MYNAMEDPIPE",
+        "\\\\.\\pipe\\MYNAMEDPIPE",  //Si no compila por esta linea, usar este parametro: L"\\\\.\\pipe\\MYNAMEDPIPE",
         GENERIC_READ | GENERIC_WRITE,
         0,
         NULL,
@@ -72,16 +72,6 @@ int main()
         cout << "WriteFile has failed with error number: " << GetLastError() << endl;
         return -1;
     }
-
-    6:22 - 6:47
-
-    6:21:69      8:27:49
-
-    8:39:41 - 8:40:60
-
-    8:43:92 - 8:54:79
-
-    10:29:81 - 10:57:74
     
     cout << "WriteFile is successful" << endl;
 
